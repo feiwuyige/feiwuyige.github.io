@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 随笔 | 台良的小家</title>
+  <title>PTA乙级1055集体照.md | 台良的小家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="电子科技大学计算机科学与技术专业就读">
-<meta property="og:type" content="website">
-<meta property="og:title" content="台良的小家">
-<meta property="og:url" content="http://example.com/tags/%E9%9A%8F%E7%AC%94/index.html">
+  <meta name="description" content="PTA 乙级1055 集体照">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PTA乙级1055集体照.md">
+<meta property="og:url" content="http://example.com/2021/08/12/PTA%E4%B9%99%E7%BA%A71055%E9%9B%86%E4%BD%93%E7%85%A7/index.html">
 <meta property="og:site_name" content="台良的小家">
-<meta property="og:description" content="电子科技大学计算机科学与技术专业就读">
+<meta property="og:description" content="PTA 乙级1055 集体照">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-12T09:31:12.000Z">
+<meta property="article:modified_time" content="2021-08-12T11:22:02.414Z">
 <meta property="article:author" content="台良">
+<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="台良的小家" type="application/atom+xml">
@@ -151,59 +154,242 @@
           </div>
           <div id="js-content" class="content-ll">
             
+    <i class="fa fa-thumb-tack"></i>
+    <font color=7D26CD>置顶</font>
+    <span class="post-meta-divider">|</span>
   
+<article id="post-PTA乙级1055集体照" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2021-07-26T05:15:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第二篇博客文章</a>
+    <h1 class="article-title" itemprop="name">
+      PTA乙级1055集体照.md
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/08/12/PTA%E4%B9%99%E7%BA%A71055%E9%9B%86%E4%BD%93%E7%85%A7/" class="archive-article-date">
+  	<time datetime="2021-08-12T09:31:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="PTA-乙级1055-集体照"><a href="#PTA-乙级1055-集体照" class="headerlink" title="PTA 乙级1055 集体照"></a>PTA 乙级1055 集体照</h1><span id="more"></span>
+
+<h2 id="一、题目详情："><a href="#一、题目详情：" class="headerlink" title="一、题目详情："></a>一、题目详情：</h2><p>拍集体照时队形很重要，这里对给定的 <em>N</em> 个人 <em>K</em> 排的队形设计排队规则如下：</p>
+<ul>
+<li>每排人数为 <em>N</em>/<em>K</em>（向下取整），多出来的人全部站在最后一排；</li>
+<li>后排所有人的个子都不比前排任何人矮；</li>
+<li>每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）；</li>
+<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
+<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。</li>
+</ul>
+<p>现给定一组拍照人，请编写程序输出他们的队形。</p>
+<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出两个正整数 <em>N</em>（≤104，总人数）和 <em>K</em>（≤10，总排数）。随后 <em>N</em> 行，每行给出一个人的名字（不包含空格、长度不超过 8 个英文字母）和身高（[30, 300] 区间内的整数）。</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出拍照的队形。即K排人名，其间以空格分隔，行末不得有多余空格。注意：假设你面对拍照者，后排的人输出在上方，前排输出在下方。</p>
+<p>[PTA1055](<a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/994805260223102976/problems/994805272021680128">题目详情 (pintia.cn)</a>)</p>
+<h2 id="二、题目分析："><a href="#二、题目分析：" class="headerlink" title="二、题目分析："></a>二、题目分析：</h2><p>这一道题难度中等，分析题目我们可以直到，这道题本质上就是一道排序的题目，只不过加入了一些背景和特殊条件。我们这里构造自己的结构体（包含一个string类型的姓名以及int类型的身高），然后直接采用C++标准模板库中的sort函数进行排序就可以了，我们在这里注意写好怎样比较的那个函数就可以了,这个比较函数具体可以参考下面的代码。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(struct people a,struct people b)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> a.height!=b.height?a.height&gt;b.height:a.name&lt;b.name;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当我们将这个数组排序之后，就可以按照题目要求进行输出。</p>
+<h2 id="三、具体代码："><a href="#三、具体代码：" class="headerlink" title="三、具体代码："></a>三、具体代码：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">people</span>&#123;</span></span><br><span class="line">    string name;</span><br><span class="line">    <span class="keyword">int</span> height;</span><br><span class="line">&#125;;<span class="comment">//定义结构体用于存放数据</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(struct people a,struct people b)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> N,K,m;<span class="comment">//N表示的人数，K表示的拍照时候的排数,m表示每一排的人数</span></span><br><span class="line">    cin&gt;&gt;N&gt;&gt;K;</span><br><span class="line">    <span class="comment">//输入N个人的姓名以及其身高</span></span><br><span class="line">    <span class="function">vector&lt;struct people&gt; <span class="title">stu</span><span class="params">(N)</span></span>;<span class="comment">//定义N个结构体</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">        cin&gt;&gt;stu[i].name&gt;&gt;stu[i].height;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(stu.<span class="built_in">begin</span>(),stu.<span class="built_in">end</span>(),cmp);<span class="comment">//按照身高由高到低排序</span></span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>,row=K;</span><br><span class="line">    <span class="keyword">while</span>(row)&#123;</span><br><span class="line">        <span class="keyword">if</span>(row==K)&#123;<span class="comment">//最后一排</span></span><br><span class="line">            m=N-(N/K)*(K<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            m=N/K;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">vector&lt;string&gt; <span class="title">ans</span><span class="params">(m)</span></span>;</span><br><span class="line">        ans[m/<span class="number">2</span>]=stu[t].name;<span class="comment">//最中间的人</span></span><br><span class="line">        <span class="comment">//左边一列</span></span><br><span class="line">        <span class="keyword">int</span> j=m/<span class="number">2</span><span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=t+<span class="number">1</span>;i&lt;t+m;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            ans[j]=stu[i].name;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//右边一列</span></span><br><span class="line">        j=m/<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=t+<span class="number">2</span>;i&lt;t+m;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            ans[j]=stu[i].name;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            cout&lt;&lt;ans[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;ans[m<span class="number">-1</span>]&lt;&lt;endl;</span><br><span class="line">        t=t+m;</span><br><span class="line">        row--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(struct people a,struct people b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.height!=b.height?a.height&gt;b.height:a.name&lt;b.name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、本题注意："><a href="#四、本题注意：" class="headerlink" title="四、本题注意："></a>四、本题注意：</h2><p>自己在做这道题的时候，刚开提交上去的代码出现了编译错误：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">people</span>&#123;</span></span><br><span class="line">    string name;</span><br><span class="line">    <span class="keyword">int</span> height;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这个代码进行编译的时候编译器提醒我们string并不是一种类型，但是我们已经在头文件中加入了string。查阅资料后得知，string类型是在std命名空间中的，所以我们以后应当养成一个良好的习惯，将“using namespace std”写在”include”的下面，避免出现错误。</p>
+<h2 id="五、今日分享："><a href="#五、今日分享：" class="headerlink" title="五、今日分享："></a>五、今日分享：</h2><p>伴着背景音乐阅读效果更加哦！</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1816373478&auto=1&height=66"></iframe>
+
+<blockquote>
+<center>《世界需要更好的你》</center>
+
+<p>这段时间，看了很多感人的爱情故事，望着那些故事，我其实挺无能为力的，却也感慨万千。 怎么说呢，大家都知道“爱情”本身是一个很大的命题，古往今来，无数文人墨客都在想这个命题。 我看过很多故事，只能给出一个我自己思考了很久的答复，简单说：1+1如果没有大于2，那就选择1。 我解释一下：如果两个人在一起，可以让彼此变的更好，更加自信，你们向往着同一个目标：结婚，那这样就是大于2的。 如果两个人在一起，你变的越来越迷茫，越来越没自信，每天心惊胆战，每天胡思乱想，每天无休止的争吵，却永远不去解决问题，那还不如选择1。 我还想跟大家谈谈几个词。 </p>
+<p>1、三观：大家应该听过一句话：三观不合，不必同行。意思就是：三观不一致，就不要在一起。友情，爱情，为人处世都是这样的。 三观也分好坏。好的三观很多，励志的，社会倡导的。那什么是错误的三观？比如这段时间传的沸沸扬扬的娱乐瓜。 那我再举个例子：你要这么想我也没办法。对，我想很多人都听过这句话，但我一直都把这句话理解为，这是对感情的极度不负责任。 </p>
+<p>2、吵架：两个人在一起，有争吵是很正常的事情。吵架最应该思考的是：你们是为了什么吵架？这是很重要的一个点。是为了让两个人更好？还是其他的，这需要自己考量。 </p>
+<p>3、解决：吵架后应该怎么做？我觉得正确的方式是：在最短的时间内，快速处理掉问题，把问题解决掉，省的夜长梦多。 </p>
+<p>4、冷暴力：有些人吵架了之后，永远不去解决问题，永远不回信息。一个人想解决问题，另外一个人永远没空。如果经常出现这样的，建议拉黑。 </p>
+<p>5、底线：无论做什么事情，一定要有自己的底线，什么是对的，什么是错的，什么能做，什么不能做，自己的心里要有一个秤。 </p>
+<p>6、陪伴：陪伴是最长情的告白。开心的时候一起分享，迷茫的时候互相鼓励，互相有个依靠。这些看似很简单的道理，其实很多人都做不到。当然，这也关系到你们能不能一起同甘共苦，患难与共。 7、分手：不打扰，是我的温柔。</p>
+<p>8、结婚：面朝大海，春暖花开。 “爱情”建立的第一前提是：两个人互相喜欢。无论离开了哪一方，这个爱情就不成立。真正的爱情，是两个人双向奔赴，一起走向婚姻。你说很喜欢一个人，可那个人永远不回应，那只能叫自我感动，因为你永远叫不醒一个装睡的人。</p>
+<p>最后，还是我的那句老话：好好生活，多看一些书，好好工作，努力赚钱，这世界需要更好的你。</p>
+<h1 style="text-align:right">陈冀瑶随笔 </h1>
+</blockquote>
+<p>今天的分享就到这里，祝大家开心哦！！！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechatpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://feiwuyige.github.io/021/08/12/PTA%E4%B9%99%E7%BA%A71055%E9%9B%86%E4%BD%93%E7%85%A7/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2021/07/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第二篇博客文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PTA-%E4%B9%99%E7%BA%A71055-%E9%9B%86%E4%BD%93%E7%85%A7"><span class="toc-number">1.</span> <span class="toc-text">PTA 乙级1055 集体照</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">一、题目详情：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">输入格式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">输出格式：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">二、题目分析：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%85%B7%E4%BD%93%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">三、具体代码：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%9C%AC%E9%A2%98%E6%B3%A8%E6%84%8F%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">四、本题注意：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BB%8A%E6%97%A5%E5%88%86%E4%BA%AB%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">五、今日分享：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">陈冀瑶随笔 </span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -231,9 +417,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
