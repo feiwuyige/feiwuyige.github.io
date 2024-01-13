@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>PTA乙级1055集体照.md | 台良的小家</title>
+  <title>2182-构造限制重复的字符串 | 台良的小家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PTA 乙级1055 集体照">
+  <meta name="description" content="2182 构造限制重复的字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA乙级1055集体照.md">
-<meta property="og:url" content="http://example.com/2021/08/12/PTA%E4%B9%99%E7%BA%A71055%E9%9B%86%E4%BD%93%E7%85%A7/index.html">
+<meta property="og:title" content="2182-构造限制重复的字符串">
+<meta property="og:url" content="http://example.com/2024/01/13/2182-%E6%9E%84%E9%80%A0%E9%99%90%E5%88%B6%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="台良的小家">
-<meta property="og:description" content="PTA 乙级1055 集体照">
+<meta property="og:description" content="2182 构造限制重复的字符串">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-12T09:31:12.000Z">
-<meta property="article:modified_time" content="2022-01-15T10:02:33.690Z">
+<meta property="og:image" content="https://s2.loli.net/2024/01/13/CWVDw5gofzai4eF.png">
+<meta property="og:image" content="https://s2.loli.net/2024/01/13/whGOK3yvfoprZAQ.png">
+<meta property="article:published_time" content="2024-01-13T15:24:08.000Z">
+<meta property="article:modified_time" content="2024-01-13T15:26:24.248Z">
 <meta property="article:author" content="台良">
-<meta property="article:tag" content="题解">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/01/13/CWVDw5gofzai4eF.png">
   
     <link rel="alternative" href="/atom.xml" title="台良的小家" type="application/atom+xml">
   
@@ -154,69 +157,67 @@
           </div>
           <div id="js-content" class="content-ll">
             
-    <i class="fa fa-thumb-tack"></i>
-    <font color=7D26CD>置顶</font>
-    <span class="post-meta-divider">|</span>
-  
-<article id="post-PTA乙级1055集体照" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-2182-构造限制重复的字符串" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      PTA乙级1055集体照.md
+      2182-构造限制重复的字符串
     </h1>
   
 
         
-        <a href="/2021/08/12/PTA%E4%B9%99%E7%BA%A71055%E9%9B%86%E4%BD%93%E7%85%A7/" class="archive-article-date">
-  	<time datetime="2021-08-12T09:31:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-12</time>
+        <a href="/2024/01/13/2182-%E6%9E%84%E9%80%A0%E9%99%90%E5%88%B6%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
+  	<time datetime="2024-01-13T15:24:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="PTA-乙级1055-集体照"><a href="#PTA-乙级1055-集体照" class="headerlink" title="PTA 乙级1055 集体照"></a>PTA 乙级1055 集体照</h1><span id="more"></span>
-<h2 id="一、题目详情："><a href="#一、题目详情：" class="headerlink" title="一、题目详情："></a>一、题目详情：</h2><p>拍集体照时队形很重要，这里对给定的 <em>N</em> 个人 <em>K</em> 排的队形设计排队规则如下：</p>
-<ul>
-<li>每排人数为 <em>N</em>/<em>K</em>（向下取整），多出来的人全部站在最后一排；</li>
-<li>后排所有人的个子都不比前排任何人矮；</li>
-<li>每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）；</li>
-<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
-<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。</li>
-</ul>
-<p>现给定一组拍照人，请编写程序输出他们的队形。</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出两个正整数 <em>N</em>（≤104，总人数）和 <em>K</em>（≤10，总排数）。随后 <em>N</em> 行，每行给出一个人的名字（不包含空格、长度不超过 8 个英文字母）和身高（[30, 300] 区间内的整数）。</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出拍照的队形。即K排人名，其间以空格分隔，行末不得有多余空格。注意：假设你面对拍照者，后排的人输出在上方，前排输出在下方。</p>
-<p><a href="[题目详情 (pintia.cn">PTA1055</a>](<a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/994805260223102976/problems/994805272021680128">https://pintia.cn/problem-sets/994805260223102976/problems/994805272021680128</a>))</p>
-<h2 id="二、题目分析："><a href="#二、题目分析：" class="headerlink" title="二、题目分析："></a>二、题目分析：</h2><p>这一道题难度中等，分析题目我们可以直到，这道题本质上就是一道排序的题目，只不过加入了一些背景和特殊条件。我们这里构造自己的结构体（包含一个string类型的姓名以及int类型的身高），然后直接采用C++标准模板库中的sort函数进行排序就可以了，我们在这里注意写好怎样比较的那个函数就可以了,这个比较函数具体可以参考下面的代码。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(struct people a,struct people b)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> a.height!=b.height?a.height&gt;b.height:a.name&lt;b.name;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当我们将这个数组排序之后，就可以按照题目要求进行输出。</p>
-<h2 id="三、具体代码："><a href="#三、具体代码：" class="headerlink" title="三、具体代码："></a>三、具体代码：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">people</span>&#123;</span></span><br><span class="line">    string name;</span><br><span class="line">    <span class="keyword">int</span> height;</span><br><span class="line">&#125;;<span class="comment">//定义结构体用于存放数据</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(struct people a,struct people b)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> N,K,m;<span class="comment">//N表示的人数，K表示的拍照时候的排数,m表示每一排的人数</span></span><br><span class="line">    cin&gt;&gt;N&gt;&gt;K;</span><br><span class="line">    <span class="comment">//输入N个人的姓名以及其身高</span></span><br><span class="line">    <span class="function">vector&lt;struct people&gt; <span class="title">stu</span><span class="params">(N)</span></span>;<span class="comment">//定义N个结构体</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">        cin&gt;&gt;stu[i].name&gt;&gt;stu[i].height;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(stu.<span class="built_in">begin</span>(),stu.<span class="built_in">end</span>(),cmp);<span class="comment">//按照身高由高到低排序</span></span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>,row=K;</span><br><span class="line">    <span class="keyword">while</span>(row)&#123;</span><br><span class="line">        <span class="keyword">if</span>(row==K)&#123;<span class="comment">//最后一排</span></span><br><span class="line">            m=N-(N/K)*(K<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            m=N/K;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">vector&lt;string&gt; <span class="title">ans</span><span class="params">(m)</span></span>;</span><br><span class="line">        ans[m/<span class="number">2</span>]=stu[t].name;<span class="comment">//最中间的人</span></span><br><span class="line">        <span class="comment">//左边一列</span></span><br><span class="line">        <span class="keyword">int</span> j=m/<span class="number">2</span><span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=t+<span class="number">1</span>;i&lt;t+m;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            ans[j]=stu[i].name;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//右边一列</span></span><br><span class="line">        j=m/<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=t+<span class="number">2</span>;i&lt;t+m;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            ans[j]=stu[i].name;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m<span class="number">-1</span>;i++)&#123;</span><br><span class="line">            cout&lt;&lt;ans[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;ans[m<span class="number">-1</span>]&lt;&lt;endl;</span><br><span class="line">        t=t+m;</span><br><span class="line">        row--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(struct people a,struct people b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.height!=b.height?a.height&gt;b.height:a.name&lt;b.name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="四、本题注意："><a href="#四、本题注意：" class="headerlink" title="四、本题注意："></a>四、本题注意：</h2><p>自己在做这道题的时候，刚开提交上去的代码出现了编译错误：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">people</span>&#123;</span></span><br><span class="line">    string name;</span><br><span class="line">    <span class="keyword">int</span> height;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br></pre></td></tr></table></figure>
-<p>这个代码进行编译的时候编译器提醒我们string并不是一种类型，但是我们已经在头文件中加入了string。查阅资料后得知，string类型是在std命名空间中的，所以我们以后应当养成一个良好的习惯，将“using namespace std”写在”include”的下面，避免出现错误。</p>
-<h2 id="五、今日分享："><a href="#五、今日分享：" class="headerlink" title="五、今日分享："></a>五、今日分享：</h2><p>伴着背景音乐阅读效果更加哦！</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1816373478&auto=1&height=66"></iframe>
-
+        <h1 id="2182-构造限制重复的字符串"><a href="#2182-构造限制重复的字符串" class="headerlink" title="2182 构造限制重复的字符串"></a>2182 构造限制重复的字符串</h1><span id="more"></span>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/construct-string-with-repeat-limit/">2182. 构造限制重复的字符串</a></p>
+<p>题目：给你一个字符串 <code>s</code> 和一个整数 <code>repeatLimit</code> ，用 <code>s</code> 中的字符构造一个新字符串 <code>repeatLimitedString</code> ，使任何字母 <strong>连续</strong> 出现的次数都不超过 <code>repeatLimit</code> 次。你不必使用 <code>s</code> 中的全部字符。返回 <strong>字典序最大的</strong> <code>repeatLimitedString</code> 。如果在字符串 <code>a</code> 和 <code>b</code> 不同的第一个位置，字符串 <code>a</code> 中的字母在字母表中出现时间比字符串 <code>b</code> 对应的字母晚，则认为字符串 <code>a</code> 比字符串 <code>b</code> <strong>字典序更大</strong> 。如果字符串中前 <code>min(a.length, b.length)</code> 个字符都相同，那么较长的字符串字典序更大。</p>
+<p>思路：自己写的超内存版本，主要思路就是使用一个<code>map</code>来存储字符串中所有的字符出现的次数，再使用一个<code>set</code>来存储字符串中的字符种类，然后将<code>set</code>按照字典序进行排序之后，来构造新的字符串，在构造的时候，首先分两种情况：</p>
+<ol>
+<li>如果该字符在字符串中出现的次数不超过<code>repeatLimit</code>次，那么就可以直接所有该字符插入，用来构造新的字符串。</li>
+<li>若超过<code>repeatLimit</code>次，那就需要每次插入<code>repeatLimit</code>个该字符（需要考虑当字符数量不够<code>repeatLimit</code>的情况），然后在<code>set</code>中寻找后面的一个字符进行插入，来完成题目中的要求，在寻找的时候需要注意特殊情况，一共有以下两种特殊情况：<ol>
+<li>如果是最后一次插入该字符，也就是说这个字符插入之后就没有该字符了，那么就不需要寻找后面的字符来进行插入了。</li>
+<li>如果后面的字符都用完了，也就是说没有字符可以使用了，那么我们就直接返回答案即可。</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">cmp</span> &#123;</span></span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">char</span> a, <span class="keyword">char</span> b)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> a &gt; b;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function">string <span class="title">repeatLimitedString</span><span class="params">(string s, <span class="keyword">int</span> repeatLimit)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//统计字符个数,统计字符种类</span></span><br><span class="line">        unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; m;</span><br><span class="line">        set&lt;<span class="keyword">char</span>, cmp&gt; kind;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; c : s) &#123;</span><br><span class="line">            m[c]++;</span><br><span class="line">            kind.<span class="built_in">insert</span>(c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//构造字符串</span></span><br><span class="line">        string ans = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = kind.<span class="built_in">begin</span>(); it != kind.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">            <span class="keyword">char</span> c = (*it);</span><br><span class="line">            <span class="comment">//如果该字符数量较少，则直接插入所有的该字符</span></span><br><span class="line">            <span class="keyword">if</span> (m[c] &gt; <span class="number">0</span> &amp;&amp; m[c] &lt;= repeatLimit) &#123;</span><br><span class="line">                <span class="function">string <span class="title">temp</span><span class="params">(m[c], c)</span></span>;</span><br><span class="line">                ans = ans + temp;</span><br><span class="line">                m[c] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//数量较多则需要插入后面的字符</span></span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">while</span> (m[c] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="comment">//先插入该字符</span></span><br><span class="line">                    <span class="keyword">int</span> cntInsert = <span class="built_in">min</span>(m[c], repeatLimit);</span><br><span class="line">                    <span class="function">string <span class="title">temp</span><span class="params">(cntInsert, c)</span></span>;</span><br><span class="line">                    ans = ans + temp;</span><br><span class="line">                    m[c] = m[c] - cntInsert;</span><br><span class="line">                    <span class="comment">//后面不用插入字符了</span></span><br><span class="line">                    <span class="keyword">if</span> (m[c] == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">                    <span class="comment">//插入后面的字符,找到后面的第一个字符进行插入</span></span><br><span class="line">                    <span class="keyword">auto</span> itTemp = it;</span><br><span class="line">                    itTemp++;</span><br><span class="line">                    <span class="comment">//处理特殊情况</span></span><br><span class="line">                    <span class="comment">//此时后面已经没有多余字符可以进行插入，要进行判断，否则（*itTemp)就会内存报错</span></span><br><span class="line">                    <span class="keyword">if</span> (itTemp == kind.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">return</span> ans;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">char</span> cTemp = (*itTemp);</span><br><span class="line">                    <span class="keyword">while</span> (itTemp != kind.<span class="built_in">end</span>() &amp;&amp; m[cTemp] == <span class="number">0</span>) &#123;</span><br><span class="line">                        itTemp++;</span><br><span class="line">                        cTemp = (*itTemp);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//处理特殊情况</span></span><br><span class="line">                    <span class="comment">//此时后面已经没有多余字符可以进行插入</span></span><br><span class="line">                    <span class="keyword">if</span> (itTemp == kind.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                        <span class="keyword">return</span> ans;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> &#123;</span><br><span class="line">                        string <span class="built_in">chaInsert</span>(<span class="number">1</span>, cTemp);</span><br><span class="line">                        ans = ans + chaInsert;</span><br><span class="line">                        m[cTemp]--;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>但是遗憾的是，遇见了一个测试用例内存不足，在自己机器上测试一下，运行成功：</p>
+<p><img src="https://s2.loli.net/2024/01/13/CWVDw5gofzai4eF.png" alt="image-20240113231620854"></p>
+<p>但是刚开始的时候出现错误：</p>
 <blockquote>
-<center>《世界需要更好的你》</center>
-
-<p>这段时间，看了很多感人的爱情故事，望着那些故事，我其实挺无能为力的，却也感慨万千。 怎么说呢，大家都知道“爱情”本身是一个很大的命题，古往今来，无数文人墨客都在想这个命题。 我看过很多故事，只能给出一个我自己思考了很久的答复，简单说：1+1如果没有大于2，那就选择1。 我解释一下：如果两个人在一起，可以让彼此变的更好，更加自信，你们向往着同一个目标：结婚，那这样就是大于2的。 如果两个人在一起，你变的越来越迷茫，越来越没自信，每天心惊胆战，每天胡思乱想，每天无休止的争吵，却永远不去解决问题，那还不如选择1。 我还想跟大家谈谈几个词。 </p>
-<p>1、三观：大家应该听过一句话：三观不合，不必同行。意思就是：三观不一致，就不要在一起。友情，爱情，为人处世都是这样的。 三观也分好坏。好的三观很多，励志的，社会倡导的。那什么是错误的三观？比如这段时间传的沸沸扬扬的娱乐瓜。 那我再举个例子：你要这么想我也没办法。对，我想很多人都听过这句话，但我一直都把这句话理解为，这是对感情的极度不负责任。 </p>
-<p>2、吵架：两个人在一起，有争吵是很正常的事情。吵架最应该思考的是：你们是为了什么吵架？这是很重要的一个点。是为了让两个人更好？还是其他的，这需要自己考量。 </p>
-<p>3、解决：吵架后应该怎么做？我觉得正确的方式是：在最短的时间内，快速处理掉问题，把问题解决掉，省的夜长梦多。 </p>
-<p>4、冷暴力：有些人吵架了之后，永远不去解决问题，永远不回信息。一个人想解决问题，另外一个人永远没空。如果经常出现这样的，建议拉黑。 </p>
-<p>5、底线：无论做什么事情，一定要有自己的底线，什么是对的，什么是错的，什么能做，什么不能做，自己的心里要有一个秤。 </p>
-<p>6、陪伴：陪伴是最长情的告白。开心的时候一起分享，迷茫的时候互相鼓励，互相有个依靠。这些看似很简单的道理，其实很多人都做不到。当然，这也关系到你们能不能一起同甘共苦，患难与共。 7、分手：不打扰，是我的温柔。</p>
-<p>8、结婚：面朝大海，春暖花开。 “爱情”建立的第一前提是：两个人互相喜欢。无论离开了哪一方，这个爱情就不成立。真正的爱情，是两个人双向奔赴，一起走向婚姻。你说很喜欢一个人，可那个人永远不回应，那只能叫自我感动，因为你永远叫不醒一个装睡的人。</p>
-<p>最后，还是我的那句老话：好好生活，多看一些书，好好工作，努力赚钱，这世界需要更好的你。</p>
-<h1 style="text-align:right">陈冀瑶随笔 </h1>
-
+<p>error C2026: 字符串太大，已截断尾部字符</p>
+<p>这种情况其实并不是CString引起的，而是因为编译器在读取一行代码的时候，限制了超长代码行。</p>
+<p>解决方案：将字符串换行书写：</p>
+<p>CString str = “ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789”<br>“ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789”</p>
+<p>“ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789”</p>
+<p>“ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789”</p>
+<p>“ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789”;</p>
+<p>类似这样即可。</p>
 </blockquote>
-<p>今天的分享就到这里，祝大家开心哦！！！</p>
+<p>比较一下与官方给出的答案，看看有没有不同：</p>
+<p><img src="https://s2.loli.net/2024/01/13/whGOK3yvfoprZAQ.png" alt="image-20240113231820196"></p>
+<p>正确的，但是想不到怎么修改了，所以开抄！！！</p>
+<p>官方的思路也是这样，我们先统计每一个字符出现的次数，使用<code>vector</code>来进行模拟，这里利用了题目中说的字符串仅由小写英文字母构成，然后进行构造。构造的时候分以下四种情况：</p>
+<ol>
+<li>当前字符已经填充完毕，即已经没有当前字符了，则处理下一个字符，重置<code>m</code>。</li>
+<li>当前字符填充数量<code>m</code>少于<code>repeatLimit</code>，则进行填充。</li>
+<li>当前字符填充数量已经大于<code>repeatLimit</code>，那么需要后面的字符进行填充，则可分为以下两种：<ol>
+<li><code>j</code>指向的字符不满足条件，也就是<code>j</code>指向的字符在<code>i</code>指向的字符之前或者<code>j</code>指向的字符数量为0，那么我们首先需要更新<code>j</code>。</li>
+<li><code>j</code>指向的字符满足条件，直接进行填充，更新数量，重置<code>m</code>。</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">26</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">repeatLimitedString</span><span class="params">(string s, <span class="keyword">int</span> repeatLimit)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">count</span><span class="params">(N)</span></span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> c : s) &#123;</span><br><span class="line">            count[c - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        string ret;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = N - <span class="number">1</span>, j = N - <span class="number">2</span>; i &gt;= <span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span>;) &#123;</span><br><span class="line">            <span class="keyword">if</span> (count[i] == <span class="number">0</span>) &#123; <span class="comment">// 当前字符已经填完，填入后面的字符，重置 m</span></span><br><span class="line">                m = <span class="number">0</span>;</span><br><span class="line">                i--;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (m &lt; repeatLimit) &#123; <span class="comment">// 当前字符未超过限制</span></span><br><span class="line">                count[i]--;</span><br><span class="line">                ret.<span class="built_in">push_back</span>(<span class="string">&#x27;a&#x27;</span> + i);</span><br><span class="line">                m++;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j &gt;= i || count[j] == <span class="number">0</span>) &#123; <span class="comment">// 当前字符已经超过限制，查找可填入的其他字符</span></span><br><span class="line">                j--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// 当前字符已经超过限制，填入其他字符，并且重置 m</span></span><br><span class="line">                count[j]--;</span><br><span class="line">                ret.<span class="built_in">push_back</span>(<span class="string">&#x27;a&#x27;</span> + j);</span><br><span class="line">                m = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>想不通为什么这样内存就不会超出？？？？</p>
 
       
 
@@ -255,18 +256,13 @@
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		
 		</ul>
@@ -322,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://feiwuyige.github.io/021/08/12/PTA%E4%B9%99%E7%BA%A71055%E9%9B%86%E4%BD%93%E7%85%A7/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://feiwuyige.github.io/024/01/13/2182-%E6%9E%84%E9%80%A0%E9%99%90%E5%88%B6%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -336,18 +332,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/08/17/%E6%97%A0%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          无题.md
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/07/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第二篇博客文章</div>
+    <a href="/2023/10/15/CPP-Primer1-4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CPP_Primer1-4</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -374,7 +361,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PTA-%E4%B9%99%E7%BA%A71055-%E9%9B%86%E4%BD%93%E7%85%A7"><span class="toc-number">1.</span> <span class="toc-text">PTA 乙级1055 集体照</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">一、题目详情：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">输入格式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">输出格式：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">二、题目分析：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%85%B7%E4%BD%93%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">三、具体代码：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%9C%AC%E9%A2%98%E6%B3%A8%E6%84%8F%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">四、本题注意：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BB%8A%E6%97%A5%E5%88%86%E4%BA%AB%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">五、今日分享：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">陈冀瑶随笔 </span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2182-%E6%9E%84%E9%80%A0%E9%99%90%E5%88%B6%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.</span> <span class="toc-text">2182 构造限制重复的字符串</span></a></li></ol>
                     </div>
                 </span>
             </div>
